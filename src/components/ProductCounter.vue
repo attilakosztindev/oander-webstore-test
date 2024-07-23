@@ -6,11 +6,11 @@ const productQty = ref<number>(0)
 
 <template lang="pug">
 .product-counter
-  .increment
-    img(@click="productQty > 0 ? productQty-- : void 0" alt="Remove Product" src="@/assets/icon_minus.svg")
-  .number {{productQty}}
-  .decrement
-    img(@click="productQty++" alt="Add Product" src="@/assets/icon_plus.svg")
+  button.product-counter__button.product-counter__button--decrement(@click="productQty > 0 ? productQty-- : void 0" aria-label="Decrease quantity")
+    img(alt="Remove Product" src="@/assets/icon_minus.svg")
+  span.product-counter__number {{ productQty }}
+  button.product-counter__button.product-counter__button--increment(@click="productQty++" aria-label="Increase quantity")
+    img(alt="Add Product" src="@/assets/icon_plus.svg")
 </template>
 
 <style scoped lang="sass">
@@ -21,22 +21,31 @@ const productQty = ref<number>(0)
   justify-content: space-between
   border: 2px solid #F0EFED
   width: 125px
+
   @media (max-width: 599px)
     width: 104px
     height: 40px
-  .number
+
+  &__number
     font-size: 18px
     font-weight: 700
     line-height: 26px
     text-align: center
-  .increment, .decrement
+    @media (max-width: 599px)
+      font-size: 16px
+  &__button
+    user-select: none
     display: flex
     height: 100%
     align-items: center
     cursor: pointer
     padding: 0 15px
+    background: none
+    border: none
+
     @media (max-width: 599px)
       padding: 0 11px
+
     img
       height: 10px
       width: 10px

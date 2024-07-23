@@ -1,37 +1,33 @@
-<script setup>
-
-</script>
-
 <template lang="pug">
-.lds-dual-ring
+.loader
 </template>
 
 <style scoped lang="scss">
-.lds-dual-ring {
-  /* change color here */
-  color: #1c4c5b
-}
-.lds-dual-ring,
-.lds-dual-ring:after {
-  box-sizing: border-box;
-}
-.lds-dual-ring {
-  display: inline-block;
+.loader {
+  display: block;
   width: 80px;
   height: 80px;
+  color: #1c4c5b;
+
+  &,
+  &::after {
+    box-sizing: border-box;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6.4px solid currentColor;
+    border-color: currentColor transparent currentColor transparent;
+    animation: loader-spin 1.2s linear infinite;
+  }
 }
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6.4px solid currentColor;
-  border-color: currentColor transparent currentColor transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
-}
-@keyframes lds-dual-ring {
+
+@keyframes loader-spin {
   0% {
     transform: rotate(0deg);
   }

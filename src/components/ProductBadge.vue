@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts" setup>
 const props = defineProps({
   bgColor: {
     required: true
@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template lang="pug">
-span.product-badge(:aria-label="ariaLabel")
+span.product-badge(:aria-label="ariaLabel" :style="{ backgroundColor: bgColor }")
   slot
 </template>
 
@@ -21,7 +21,6 @@ span.product-badge(:aria-label="ariaLabel")
   width: 60px
   color: white
   text-transform: uppercase
-  background-color: v-bind(bgColor)
   display: flex
   justify-content: center
   align-items: center

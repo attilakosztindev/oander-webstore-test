@@ -12,12 +12,12 @@ const props = defineProps({
 </script>
 
 <template lang="pug">
-.product-grid(v-if="products")
+.products-list(v-if="products")
   ProductCard( v-for="product in products" :key="product.id" :product="product")
 </template>
 
 <style lang="sass">
-.product-grid
+.products-list
   opacity: 1
   justify-content: center
   max-width: 1518px

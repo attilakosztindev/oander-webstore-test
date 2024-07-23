@@ -5,7 +5,3 @@ import HomeView from "./views/HomeView.vue";
 <template lang="pug">
 home-view
 </template>
-
-<style scoped>
-
-</style>

@@ -13,7 +13,8 @@ const props = defineProps({
 })
 
 const getIcon = computed(() => {
-  return `/src/assets/${props.icon}.svg`
+  if (!props.icon) return ''
+  return new URL(`/src/assets/${props.icon}`, import.meta.url).href
 })
 </script>
 

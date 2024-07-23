@@ -1,12 +1,10 @@
-<script setup>
-
-</script>
-
 <template lang="pug">
 main.app-page
   slot(name="pageContent")
 </template>
 
-<style scoped>
-
+<style lang="sass" scoped>
+.app-page
+  display: flex
+  justify-content: center
 </style>
