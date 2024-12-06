@@ -1,44 +1,79 @@
-# Feladat
+# 🛠 Frontend Development Task
 
-A build és működés megvalósítása az alábbi támpontok segítségével.
+This project outlines the implementation of a **Vue.js 3 build** based on the provided design and functionality requirements. Follow the steps and guidance below to complete the task effectively.
 
-A projekt root folderében a megfelelő [node verzió](#node-version) beállítása után, npm install paranccsal tedd fel a Vue.js 3 környezetet.
+---
 
-A grafikai terv a ["Design"](#design) bekezdés alatt található linken érhető el. Az elemek figmában történő inspecteléséhez (amennyiben nem rendelkezel figma accounttal, illetve nem is szeretnél regisztrálni), g-mail fiókkal való belépés szükséges. 
-Első lépésben szeretnénk látni a mobile first szemléletbeli pixel pontos builded a vue.js framework segítségével. 
-A build megvalósításához lehet használi library-t, de kérünk, törekedj a minél lightweightebb megoldásra (pl.: bootstrap, csak bizonyos komponenseinek a behúzása a teljes elérhető könyvtár helyett).
+## 🔧 Build Instructions
 
-A termékkártyákon található adatok feltöltéséhez az ["API"](#api) bekezdés alatt található végpontot használd.
+1. **Environment Setup**:
+   - Set the appropriate [Node version](#node-version) in the project root directory.
+   - Run the following command to initialize the Vue.js 3 environment:
+     ```bash
+     npm install
+     ```
 
-Ahhoz, hogy minél tisztább képet kapjunk a vanilla.js tudásodról, kérlek törekedj a natív javascript megoldásokra, kerülve a packagek, kiegészítők használatát.
+2. **Design**:
+   - The graphical design is available under the ["Design"](#design) section.  
+   - To inspect elements in Figma:
+     - Use your Gmail account to log in if you don’t have a Figma account or don’t want to create one.
 
-<br>
+3. **Mobile-First Approach**:
+   - Build the layout with a **pixel-perfect mobile-first** mindset using Vue.js.
+   - Libraries can be used sparingly, with an emphasis on lightweight solutions (e.g., selective use of Bootstrap components rather than the entire library).
 
-## Funkcionalitás
+4. **Product Data**:
+   - Populate the product cards using the endpoint specified in the ["API"](#api) section.
 
-A terveken található "more products" felirathoz, wishlist gombhoz, színválasztó swatch-hoz, mennyiségváltó inputhoz és "add to cart" gombhoz ebben a feladatban nem tartozik működésbeli követelmény.
+5. **Vanilla JavaScript**:
+   - To showcase your **vanilla.js skills**, avoid using external packages or plugins wherever possible.
 
-### Category
+---
 
-A kategória szűrést a terveken is látható 4 állapotra szükséges megvalósítani.
+## 🎯 Functional Requirements
 
-### Filter
+### ✅ Core Functionality:
+1. **Category Filtering**:
+   - Implement category filtering based on the four states visible in the design.
 
-Itt szeretnénk, ha az új és akciós termékekre egyaránt elkészülne a szűrés funkció. A terveken nem látszik, de elegendő egy natív select az optionök megjelenítéséhez.
+2. **Filter by Condition**:
+   - Implement filtering for **new** and **on sale** products using a native `<select>` element for options.  
+   - The design doesn't specify the filter UI, so a simple native select will suffice.
 
-<br>
+3. **Excluded Features**:
+   - No functionality is required for the following elements in this task:
+     - "More products" link
+     - Wishlist button
+     - Color swatch selector
+     - Quantity input
+     - "Add to cart" button
 
-## Design
+---
 
-[Figma link](https://www.figma.com/file/GDhg551sqnWt2ppOzgVG0T/FE-Pr%C3%B3bafeladat?node-id=0%3A1)
+## 🎨 Design
 
-## API
+Access the graphical design using the link below:  
+[**Figma Design**](https://www.figma.com/file/GDhg551sqnWt2ppOzgVG0T/FE-Pr%C3%B3bafeladat?node-id=0%3A1)  
+*(Log in with a Gmail account if necessary for inspection.)*
 
-[MockAPI link](https://63500f5078563c1d82b7d0ab.mockapi.io/oander-frontend/products)
+---
 
+## 🌐 API
 
-## Node version
+Fetch product data from the following endpoint:  
+[**MockAPI Endpoint**](https://63500f5078563c1d82b7d0ab.mockapi.io/oander-frontend/products)
 
-A projektet minimum v16.18.0 node verzióval inicializáld.
+---
 
-<br><br>
+## ⚙️ Node Version
+
+Ensure the project is initialized with **Node.js v16.18.0** or later.
+
+---
+
+## 🖥️ Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-repo/frontend-task.git
+   cd frontend-task
